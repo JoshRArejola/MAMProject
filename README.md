@@ -1,1 +1,1 @@
-# MAMProject
+# MAMProjectSicko mode
