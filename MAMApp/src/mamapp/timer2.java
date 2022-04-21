@@ -7,6 +7,7 @@ package mamapp;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
 /**
@@ -32,10 +33,16 @@ public class timer2 extends MAM {
         
         System.out.println("Seconds till main break:" + newBreakNo );
         
+        MAMGUI.BreakRemaining.setText ( newBreakNo + "Seconds");
+        
         
         if (newBreakNo == 0) {
-                    JOptionPane.showMessageDialog(null,"Take a break!");
-                   
+            timer2.cancel();
+         timer2.purge();
+                   JOptionPane optionPane = new JOptionPane("Please take a break!",JOptionPane.WARNING_MESSAGE);
+            JDialog dialog = optionPane.createDialog("Warning!");
+            dialog.setAlwaysOnTop(true); // to show top of all other application
+            dialog.setVisible(true); // to visible the dialog
                 }
         }
     }

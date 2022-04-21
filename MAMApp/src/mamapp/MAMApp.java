@@ -5,11 +5,14 @@
  */
 package mamapp;
 
+import java.io.File;
+import java.io.IOException;
+
 /**
  *
  * @author ztjam
  */
-public class MAMApp {
+public abstract class MAMApp {
 
     /**
      * @param args the command line arguments
@@ -17,8 +20,18 @@ public class MAMApp {
     public static void main(String[] args) {
         MAMGUI myGUI = new MAMGUI();
         myGUI.setVisible(true);
-        
-        
+            try {
+      File myObj = new File("MAMcalender.txt");
+      if (myObj.createNewFile()) {
+        System.out.println("File created: " + myObj.getName());
+      } else {
+        System.out.println("File already exists.");
+      }
+    } catch (IOException e) {
+      System.out.println("An error occurred.");
+      e.printStackTrace();
+    }
+    
     }
     
 }

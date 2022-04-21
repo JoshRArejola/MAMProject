@@ -7,6 +7,7 @@ package mamapp;
 
 import java.util.Timer;
 import java.util.TimerTask;
+import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 
 /**
@@ -21,9 +22,13 @@ public class timer extends MAM {
     TimerTask task = new TimerTask() {
     @Override
     
+    
     public void run() {
         
-      
+        
+        
+             
+             
         
         if(newWaterNo >0){
            
@@ -32,12 +37,21 @@ public class timer extends MAM {
         
         System.out.println("Seconds till water break:" + newWaterNo );
         
+        MAMGUI.WaterRemaining.setText ( newWaterNo + "Seconds");
         
         if (newWaterNo == 0) {
-                    JOptionPane.showMessageDialog(null,"Drink Water!");
-                   
+                 
+                    // https://stackoverflow.com/questions/9119481/how-to-present-a-simple-alert-message-in-java
+         JOptionPane optionPane = new JOptionPane("Please drink some water!",JOptionPane.WARNING_MESSAGE);
+            JDialog dialog = optionPane.createDialog("Warning!");
+            dialog.setAlwaysOnTop(true); // to show top of all other application
+            dialog.setVisible(true); // to visible the dialog
+
+                
                 }
+        
         }
+        
     }
         
     
