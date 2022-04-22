@@ -10,7 +10,7 @@ Java Version 16 (Minimum 8)
 Windows 10
 
 
-========================
+======================================================================================================================================================================
 BUILD OUTPUT DESCRIPTION
 
 When you build an Java application project that has a main class, the IDE
