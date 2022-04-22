@@ -6,4 +6,4 @@
 
 Dependencies:
 Java Version 16 (Minimum 8)
-Windows
+Windows 10
