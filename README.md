@@ -5,4 +5,5 @@
 
 
 Dependencies:
-Java Version 16
+Java Version 16 (Minimum 8)
+Windows
