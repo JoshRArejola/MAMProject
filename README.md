@@ -43,3 +43,7 @@ the projects runtime path.
 in the Projects window and choose Properties. Then click Run and enter the
 class name in the Main Class field. Alternatively, you can manually type the
 class name in the manifest Main-Class element.
+
+---------------------------------------------------------------
+
+We realized too late that we needed to continuously upload to github. Ian and I(Josh) already sent James our coding for the application and he uploaded everything onto github. We met up during easter break and worked on our application together in person along with calls in discord. Our calls history can back this up
